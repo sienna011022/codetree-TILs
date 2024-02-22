@@ -25,7 +25,7 @@ for i in range(n):
 
 for i in range(n):
     for j in range(m):
-        if j < n-2 : 
+        if j < m-2 : 
             ans = max(ans,graph[i][j] + graph[i][j+1] + graph[i][j+2])
 
 for j in range(n):
