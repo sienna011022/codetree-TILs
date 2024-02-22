@@ -20,17 +20,19 @@ ans = 0
 for i in range(n):
     for j in range(m):
         for direction in range(4):
-            if i < n-1 and j  < m-1:
+            if i < n-1 and j < m-1:
                 ans = max(ans,count(i,j,direction))
 
 for i in range(n):
     for j in range(m):
-        if j < m-2 : 
+        if j < m-2 :
+        
             ans = max(ans,graph[i][j] + graph[i][j+1] + graph[i][j+2])
 
-for j in range(n):
-    for i in range(m):
+for j in range(m):
+    for i in range(n):
         if i < n-2 : 
+             
             ans = max(ans,graph[i][j] + graph[i+1][j] + graph[i+2][j])
 
 
